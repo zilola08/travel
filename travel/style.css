@@ -7,7 +7,8 @@
 
 body {
     background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg) no-repeat;
-    background-size: 1440px 855px;
+    width: 100vw;
+    /* background-size: 1440px 855px; */
 }
 
 
@@ -41,6 +42,7 @@ body {
     align-items: center;
     align-content: center;
     height: 90px;
+    width: 100%;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
@@ -188,29 +190,43 @@ figure {
     align-items: center;
 }
 
-/*  */
+/*------------DESTINATIONS SECTION------------  */
 
-.destinations{
+/* .destinations-container {
     height: 1042px;
+    width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+} */
+
+.slider-container{
+    position: relative;
+    height: 800px;
+    width: 1970px;
+    max-width: 2520px;
+    overflow: hidden;
+    left: -530px;
 }
 
-.slider {
-    display: flex;
+.cards {
+    width: 2520px;
+    display: grid;
+    grid-template-columns: repeat(3, 800px);
+    grid-gap: 60px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
 }
 
 .arrow-right-icon {
     width: 35px;
 }
 
-.destination-img {
-    width: 800px;
-    height: 800px;
+.card {
+    overflow: hidden;
+    border-radius: 16px;
 }
-
-
-
-
-
