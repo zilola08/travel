@@ -42,19 +42,49 @@ sliderContainer.addEventListener("mousemove", (e) => {
 
     boundCards();
     // this is to put the boundaries for the slider
+    dots();
 }
 );
 
 function boundCards() {
 
-    if (cards.offsetLeft < -1190) {
-        cards.style.left = `-1190px`;
+    if (cards.offsetLeft < -1061) {
+        cards.style.left = `-1061px`;
     }
     // -> the right boundary -> this stops the slider at the point where the first image is fully shown and slider cant move further right
 
 
-    else if (cards.offsetLeft > 1180) {
-        cards.style.left = `1180px`;
+    else if (cards.offsetLeft > 860) {
+        cards.style.left = `860px`;
     }
     // -> the left boundary -> this stops the slider at the point where the last image is fully shown and slider cant move further left
+}
+
+const allDots = document.querySelectorAll(".dot");
+
+const dots = () => {
+
+    if (cards.offsetLeft >= 430 && cards.offsetLeft <= 860) {
+        allDots[0].classList.add("active-dot");
+
+        allDots[1].classList.remove("active-dot");
+
+        allDots[2].classList.remove("active-dot");
+    }
+
+    else if (cards.offsetLeft >= -430 && cards.offsetLeft <= 430) {
+        allDots[1].classList.add("active-dot");
+
+        allDots[0].classList.remove("active-dot");
+
+        allDots[2].classList.remove("active-dot");
+    }
+
+    else if (cards.offsetLeft >= -860 && cards.offsetLeft <= -430) {
+        allDots[2].classList.add("active-dot");
+
+        allDots[1].classList.remove("active-dot");
+
+        allDots[0].classList.remove("active-dot");
+    }
 }

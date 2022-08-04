@@ -6,9 +6,26 @@
 }
 
 body {
-    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg) no-repeat;
-    width: 100vw;
     /* background-size: 1440px 855px; */
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg), url(./assets/jpg/footer_img.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    width: 100vw;
+    }
+    
+
+.section {
+    margin: 0 auto;
+}
+
+img {
+    border-radius: 16px;
 }
 
 
@@ -53,14 +70,11 @@ body {
     align-items: center;
 }
 
-span.navbar-brand-icon {
-    width: 30px;
-    height: 30px;
-}
-
 .navbar-brand,
 .nav-link,
-.navbar-btn {
+.navbar-btn,
+h1,
+p.preview-text {
     border: none;
     color: white;
 }
@@ -101,12 +115,6 @@ h1 {
     font-size: 80px;
 }
 
-h1,
-p.preview-text {
-    color: white;
-    font-weight: 700;
-}
-
 p.preview-text {
     font-style: italic;
     font-size: 20px;
@@ -116,23 +124,14 @@ p.preview-text {
     background-color: rgba(255, 255, 255, 0.70);
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
     align-items: center;
-    width: 892px;
-    height: 95px;
     border-radius: 16px;
 }
 
 ::placeholder {
     color: #F2785C;
-    border: none;
-    background-color: transparent;
-    resize: none;
-    outline: none;
     font-style: italic;
-    font-weight: 400;
     font-size: 24px;
-
 }
 
 input {
@@ -144,11 +143,8 @@ input {
 }
 
 .btn-preview {
-    width: 228px;
-    height: 59px;
-    font-size: 24px;
-    font-weight: 500;
     margin-right: 18px;
+    white-space: nowrap;
 }
 
 /* -----------SECTION STEPS------------ */
@@ -161,13 +157,14 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 247px;
+    margin: 0;
 }
 
 .section-title {
     font-size: 40px;
     color: rgba(242, 120, 92, 1);
     text-align: center;
+    margin: 80px 0;
 }
 
 .steps-container {
@@ -192,16 +189,8 @@ figure {
 
 /*------------DESTINATIONS SECTION------------  */
 
-/* .destinations-container {
-    height: 1042px;
-    width: 1440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
 
-.slider-container{
+.slider-container {
     position: relative;
     height: 800px;
     width: 1970px;
@@ -214,7 +203,7 @@ figure {
     width: 2520px;
     display: grid;
     grid-template-columns: repeat(3, 800px);
-    grid-gap: 60px; 
+    grid-gap: 60px;
     position: absolute;
     top: 0;
     left: 0;
@@ -222,11 +211,79 @@ figure {
     width: 100%;
 }
 
+.card {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.dots {
+    margin: 24px;
+    text-align: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(242, 120, 92, 0.5);
+}
+
+.active-dot {
+    background: rgba(242, 120, 92, 1);
+    cursor: default;
+}
+
 .arrow-right-icon {
     width: 35px;
 }
 
-.card {
-    overflow: hidden;
-    border-radius: 16px;
+/* ------------TRAVEL STORIES SECTION-------- */
+
+.stories {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding-bottom: 55px;
+}
+
+.story {
+    display: flex;
+    gap: 40px;
+    margin: 30px;
+    color: #0D606F;
+}
+
+h3.story-title {
+    font-size: 35px;
+}
+
+p.story-text {
+    font-size: 24px;
+}
+
+a {
+    color: #0D606F;
+}
+
+/* ------Footer------ */
+.footer-section {
+    background-color: rgba(255, 255, 255, 0.7);;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    margin: 0 auto;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    list-style: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
 }
