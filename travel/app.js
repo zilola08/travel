@@ -8,14 +8,14 @@ let isPressedDown = false;
 // x horizontal space of cursor from inner container
 let cursorXspace;
 
-sliderContainer.addEventListener('mousedown', (e) => {
+sliderContainer.addEventListener('pointerdown', (e) => {
     isPressedDown = true;
     cursorXspace = e.offsetX - cards.offsetLeft;
 
     // console.log(e.offsetX)
     // -> x-coordinate of cursor counting from the window most left point
 
-    console.log(cards.offsetLeft)
+    // console.log(cards.offsetLeft)
 
     // -> x-coordinate of the point where the cards-div starts
 
@@ -24,16 +24,17 @@ sliderContainer.addEventListener('mousedown', (e) => {
 
 });
 
-window.addEventListener('mouseup', () => {
+window.addEventListener('pointerup', () => {
     isPressedDown = false;
 })
+
 const firstImg = document.querySelector('.card:first-child')
 const lastImg = document.querySelector('.card:last-child')
 
-sliderContainer.addEventListener("mousemove", (e) => {
+
+sliderContainer.addEventListener("pointermove", (e) => {
     if (!isPressedDown) return;
     // -> stops the function from executing if mouse is not pressed down
-
     e.preventDefault();
     // -> this stops the mouse on the screen from moving when the user moves the mouse
 
@@ -46,25 +47,38 @@ sliderContainer.addEventListener("mousemove", (e) => {
 }
 );
 
+// Setting boundaries for the slider-movement
+
+let numberOfCards = cards.childElementCount;
+let widthOfCard = 800;
+let cardGap = 60;
+let leftOverlay = 530;
+let sliderSize = (widthOfCard * numberOfCards) + (cardGap * (numberOfCards - 1));
+
+let leftLimit = widthOfCard + cardGap;
+let RightLimit = - (sliderSize - (widthOfCard + cardGap) - leftOverlay)
+
+
 function boundCards() {
 
-    if (cards.offsetLeft < -1061) {
-        cards.style.left = `-1061px`;
-    }
-    // -> the right boundary -> this stops the slider at the point where the first image is fully shown and slider cant move further right
-
-
-    else if (cards.offsetLeft > 860) {
-        cards.style.left = `860px`;
+    if (parseInt(cards.style.left) > leftLimit) {
+        cards.style.left = `${leftLimit}px`;
     }
     // -> the left boundary -> this stops the slider at the point where the last image is fully shown and slider cant move further left
+
+
+    if (parseInt(cards.style.left) < RightLimit) {
+        cards.style.left = `${RightLimit}px`;
+    }
+    // -> the right boundary -> this stops the slider at the point where the first image is fully shown and slider cant move further right
 }
+// }
 
 const allDots = document.querySelectorAll(".dot");
 
 const dots = () => {
 
-    if (cards.offsetLeft >= 430 && cards.offsetLeft <= 860) {
+    if (cards.offsetLeft >= ((widthOfCard + cardGap) / 2) && cards.offsetLeft <= (widthOfCard + cardGap)) {
         allDots[0].classList.add("active-dot");
 
         allDots[1].classList.remove("active-dot");
@@ -72,7 +86,7 @@ const dots = () => {
         allDots[2].classList.remove("active-dot");
     }
 
-    else if (cards.offsetLeft >= -430 && cards.offsetLeft <= 430) {
+    else if (cards.offsetLeft >= -((widthOfCard + cardGap) / 2) && cards.offsetLeft <= ((widthOfCard + cardGap) / 2)) {
         allDots[1].classList.add("active-dot");
 
         allDots[0].classList.remove("active-dot");
@@ -80,7 +94,7 @@ const dots = () => {
         allDots[2].classList.remove("active-dot");
     }
 
-    else if (cards.offsetLeft >= -860 && cards.offsetLeft <= -430) {
+    else if (cards.offsetLeft >= -(widthOfCard + cardGap) && cards.offsetLeft <= -((widthOfCard + cardGap) / 2)) {
         allDots[2].classList.add("active-dot");
 
         allDots[1].classList.remove("active-dot");
@@ -88,3 +102,43 @@ const dots = () => {
         allDots[0].classList.remove("active-dot");
     }
 }
+
+// LOGIN POPUP
+
+const loginButton = document.querySelector('#login_button')
+const popupEl = document.querySelector('#popup')
+
+
+// Showing popup when clicked on the LOGIN button:
+
+loginButton.addEventListener('click', (e) => {
+    setTimeout(() => {
+        if (!popupEl.classList.contains("shown")) {
+            // Add class `show` to filterList element
+            popupEl.classList.add("shown");
+        }
+    }, 250);
+})
+
+// Closing the pop-up when clicked outside:
+
+const popupContent = document.querySelector('.popup-content')
+
+document.addEventListener("click", (e) => {
+    // Get the element that was clicked
+    const clickedEl = e.target;
+    // console.log(clickedEl);
+
+    if (!popupContent.contains(clickedEl)) {
+        // `popupContent` is the element we're detecting clicks outside of
+
+        popupEl.classList.remove("shown");
+        // console.log(popupEl.classList)
+    }
+}
+)
+
+
+
+
+

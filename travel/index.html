@@ -15,7 +15,7 @@
     <title>Travel</title>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <header>
             <nav class="navbar-container section">
@@ -44,7 +44,44 @@
                     </ul>
                 </div>
 
-                <button class="btn navbar-btn" type="submit">Login</button>
+                <!-- LOGIN POPUP -->
+                <button class="btn navbar-btn login" id="login_button">Login</button>
+                <div id="popup">
+                    <!-- <div class="background"> -->
+                    <div class="popup-content">
+                        <!-- <div class="close-popup"><span>&#10005;</span></div> -->
+                        
+                            <p class="login-title">Log in to your account</p>
+                            <a class="login-field facebook" href="#"> <span><img src="./assets/svg/facebook_signin.svg"
+                                        alt=""></span> Sign In with
+                                Facebook</a>
+                            <a class="login-field google" href="#"> <span><img src="./assets/svg/google_signin.svg"
+                                        alt=""></span> Sign In with
+                                Google</a>
+                            <div class="line-or-line">
+                                <img src="./assets/svg/Line-half.svg" alt=""> <span>or</span> <img
+                                    src="./assets/svg/Line-half.svg" alt="">
+
+                            </div>
+                            <div class="inputs">
+                                <div class="email">
+                                    <label class="input-label" for="email">E-mail</label>
+                                    <input class="login-field" id="email" name="email" type="email" placeholder="">
+                                </div>
+                                <div class="password">
+                                    <label class="input-label" for="password">Password</label>
+                                    <input class="login-field" id="password" name="password" type="password"
+                                        placeholder="">
+                                </div>
+                            </div>
+                            <a class="login-field sign-in" href="#">Sign In</a>
+                            <a href="#">Forgot Your Password?</a>
+                            <span><img src="./assets/svg/Line-full.svg" alt=""></span>
+                            <div><span>Don`t have an account?</span> <a href="#" id="register_link">Register</a> </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
 
             </nav>
 
