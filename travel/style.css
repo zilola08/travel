@@ -5,25 +5,23 @@
     padding: 0;
 }
 
-body {
-    /* background-size: 1440px 855px; */
-    /* position: relative; */
-    /* width: 100%;
-    max-width: 100%; */
+html {
+    overflow-x: hidden;
+
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg), url(./assets/jpg/footer_img.jpeg);
-    background-repeat: no-repeat;
-    background-position: center top, center bottom;
-    width: 100vw;
+body {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 
 .section {
     margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
 }
 
 img {
@@ -102,6 +100,11 @@ p.preview-text {
 section.preview {
     height: 765px;
     display: flex;
+    flex-direction: column;
+    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg), url(./assets/jpg/footer_img.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    background-size: cover;
 }
 
 .preview.section-text {
@@ -196,9 +199,9 @@ figure {
 .slider-container {
     position: relative;
     height: 800px;
-    width: 1970px;
-    max-width: 2520px;
-    overflow: hidden;
+    /* width: 1970px;
+    max-width: 2520px; */
+    /* overflow: hidden; */
     left: -530px;
     touch-action: none;
 }
@@ -211,12 +214,18 @@ figure {
     top: 0;
     left: 0;
     touch-action: none;
+    pointer-events: none;
+    /* -> pointer events are off here so that e.offsetX is not calculated to anyo ther div but slider-container. If we dont turn it off, e.offsetX will be relative to each card, not the container, so it will change each time we are pointing on another card. But we want it to be consistently relative to one big container, which is slider-container. */
     width: 100%;
 }
 
 .card {
     overflow: hidden;
     border-radius: 16px;
+}
+
+.destination-image {
+    width: 100%;
 }
 
 .dots {
@@ -259,6 +268,10 @@ h3.story-title {
     font-size: 35px;
 }
 
+.story-image {
+    width: 100%;
+}
+
 p.story-text {
     font-size: 24px;
 }
@@ -285,6 +298,7 @@ a {
 .socials {
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 
 .button {
@@ -292,6 +306,9 @@ a {
     justify-content: center;
 }
 
+.footer-element {
+    width: 260px;
+}
 
 
 /* ---------LOGIN POPUP--------- */
@@ -430,3 +447,5 @@ form.sign-in {
 #signup-popup.shown {
     display: flex;
 }
+
+/* ------------MOBILE------------ */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +16,8 @@
 </head>
 
 <body class="body">
-    <div class="container">
-        <header>
+    <div class="container-main">
+        <header class="container">
             <nav class="navbar-container section">
                 <div class="navbar-brand-container">
                     <span class="navbar-brand navbar-brand-icon"><img src="./assets/svg/Vector.svg" alt=""></span> <span
@@ -121,15 +121,15 @@
             <section class="preview section">
                 <div class="preview section-text">
                     <h1>Explore the beauty of the World</h1>
-                    <p class="preview-text">Receive personalized recommendations for countries, hotels, activities and
+                    <p class="preview-text">Receive personalized recommendations for countries, hotels, activities
+                        and
                         more
                     </p>
-                    <nav class="navbar search-field">
-                        <input type="search" placeholder="What would you like to do?" aria-label="Start Planning">
-                        <button class="btn btn-preview" type="submit">Start Planning</button>
-                    </nav>
                 </div>
-
+                <nav class="navbar search-field">
+                    <input type="search" placeholder="What would you like to do?" aria-label="Start Planning">
+                    <button class="btn btn-preview" type="submit">Start Planning</button>
+                </nav>
             </section>
 
             <section class="steps section">
@@ -175,7 +175,6 @@
                         <img src="./assets/svg/dot.svg" alt="" class="dot">
                         <img src="./assets/svg/dot.svg" alt="" class="dot active-dot">
                         <img src="./assets/svg/dot.svg" alt="" class="dot">
-
                     </div>
                     <div class="button">
                         <button class="btn destinations-btn"><img class="arrow-right-icon"
@@ -187,8 +186,8 @@
             <section class="stories section">
                 <h2 class="section-title">TRAVEL STORIES</h2>
                 <div class="stories-container">
-                    <div class="story"><img src="./assets/jpg/story-1.jpeg" alt="" class="story-img"> <span
-                            class="story-box">
+                    <div class="story"><img src="./assets/jpg/story-1.jpeg" alt="" class="story-img">
+                        <div class="story-box">
                             <h3 class="story-title">10 Photos of Attractive Thailand</h3>
                             <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
@@ -202,9 +201,10 @@
                                 est
                                 laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><a href="#">Read
                                 More</a>
-                        </span></div>
-                    <div class="story"><img src="./assets/jpg/story-2.jpeg" alt="" class="story-img"> <span
-                            class="story-box">
+                        </div>
+                    </div>
+                    <div class="story"><img src="./assets/jpg/story-2.jpeg" alt="" class="story-img">
+                        <div class="story-box">
                             <h3 class="story-title">Canyonlands National Park, Utah</h3>
                             <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
@@ -218,9 +218,10 @@
                                 est
                                 laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><a href="#">Read
                                 More</a>
-                        </span></div>
-                    <div class="story"><img src="./assets/jpg/story-3.jpeg" alt="" class="story-img"> <span
-                            class="story-box">
+                        </div>
+                    </div>
+                    <div class="story"><img src="./assets/jpg/story-3.jpeg" alt="" class="story-img">
+                        <div class="story-box">
                             <h3 class="story-title">I left my heart in the Mountains!</h3>
                             <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
@@ -234,9 +235,10 @@
                                 est
                                 laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><a href="#">Read
                                 More</a>
-                        </span></div>
-                    <div class="story"><img src="./assets/jpg/story-4.jpeg" alt="" class="story-img"> <span
-                            class="story-box">
+                        </div>
+                    </div>
+                    <div class="story"><img src="./assets/jpg/story-4.jpeg" alt="" class="story-img">
+                        <div class="story-box">
                             <h3 class="story-title">The Longest journey in my life!</h3>
                             <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod
@@ -250,7 +252,8 @@
                                 est
                                 laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><a href="#">Read
                                 More</a>
-                        </span></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="button">
                     <button class="btn btn-destinations"><img class="arrow-right-icon"
@@ -260,11 +263,11 @@
 
         </main>
 
-        <footer class="footer-section">
+        <footer class="footer-section section">
             <div class="footer">
-                <span> </span>
-                <span>All Rights Reserved &copy; Travel Portal</span>
-                <span>
+                <span class="footer-element"> </span>
+                <span class="footer-element">All Rights Reserved &copy; Travel Portal</span>
+                <div class="footer-element">
                     <ul class="socials">
                         <li><a href="https://github.com/zilola08 " target="_blank"><img src="./assets/svg/instagram.svg"
                                     alt=""></a></li>
@@ -273,7 +276,7 @@
                         <li><a href="https://github.com/zilola08 " target="_blank"><img src="./assets/svg/twitter.svg"
                                     alt=""></a></li>
                     </ul>
-                </span>
+                </div>
             </div>
         </footer>
     </div>

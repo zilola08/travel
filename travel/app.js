@@ -1,7 +1,7 @@
+// SWIPER
+
 const sliderContainer = document.querySelector('.slider-container')
-
-const cards = document.querySelector('.cards')
-
+let cards = document.querySelector('.cards');
 // keep track mouse-down & mouse-up
 let isPressedDown = false;
 
@@ -12,14 +12,13 @@ sliderContainer.addEventListener('pointerdown', (e) => {
     isPressedDown = true;
     cursorXspace = e.offsetX - cards.offsetLeft;
 
-    // console.log(e.offsetX)
+    console.log(`e.offsetX is ${e.offsetX}`)
     // -> x-coordinate of cursor counting from the window most left point
 
-    // console.log(cards.offsetLeft)
-
+    console.log(`cards.offsetLeft is ${cards.offsetLeft}`)
     // -> x-coordinate of the point where the cards-div starts
 
-    // console.log(cursorXspace)
+    console.log(`cards.offsetLeft is ${cards.offsetLeft}`)
     // -> x-coordinate of cursor counting from the cards-div`s start
 
 });
@@ -33,17 +32,17 @@ const lastImg = document.querySelector('.card:last-child')
 
 
 sliderContainer.addEventListener("pointermove", (e) => {
-    if (!isPressedDown) return;
+    if (!isPressedDown) return
     // -> stops the function from executing if mouse is not pressed down
-    e.preventDefault();
+    e.preventDefault()
     // -> this stops the mouse on the screen from moving when the user moves the mouse
 
-    cards.style.left = `${e.offsetX - cursorXspace}px`;
-    //  -> this moves the cards-div to the x-position whcih is at wherever the mouse goes (e.offsetX) - distance between the start of the cards-div and the cursor (cursorXspace)
+    cards.style.left = `${e.offsetX - cursorXspace}px`
+    //  -> this moves the cards-div to the x-position which is at wherever the mouse goes (e.offsetX) - distance between the start of the cards-div and the cursor (cursorXspace)
 
-    boundCards();
+    boundCards()
     // this is to put the boundaries for the slider
-    dots();
+    dots()
 }
 );
 
@@ -72,7 +71,8 @@ function boundCards() {
     }
     // -> the right boundary -> this stops the slider at the point where the first image is fully shown and slider cant move further right
 }
-// }
+
+// DOTS-SLIDER
 
 const allDots = document.querySelectorAll(".dot");
 
@@ -80,25 +80,19 @@ const dots = () => {
 
     if (cards.offsetLeft >= ((widthOfCard + cardGap) / 2) && cards.offsetLeft <= (widthOfCard + cardGap)) {
         allDots[0].classList.add("active-dot");
-
         allDots[1].classList.remove("active-dot");
-
         allDots[2].classList.remove("active-dot");
     }
 
     else if (cards.offsetLeft >= -((widthOfCard + cardGap) / 2) && cards.offsetLeft <= ((widthOfCard + cardGap) / 2)) {
         allDots[1].classList.add("active-dot");
-
         allDots[0].classList.remove("active-dot");
-
         allDots[2].classList.remove("active-dot");
     }
 
     else if (cards.offsetLeft >= -(widthOfCard + cardGap) && cards.offsetLeft <= -((widthOfCard + cardGap) / 2)) {
         allDots[2].classList.add("active-dot");
-
         allDots[1].classList.remove("active-dot");
-
         allDots[0].classList.remove("active-dot");
     }
 }
