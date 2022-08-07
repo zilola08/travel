@@ -46,7 +46,7 @@
 
                 <!-- LOGIN POPUP -->
                 <button class="btn navbar-btn login" id="login-button">Login</button>
-                
+
                 <div id="login-popup">
 
                     <div class="login-popup-content">
@@ -63,7 +63,8 @@
                                 src="./assets/svg/Line-half.svg" alt="">
 
                         </div>
-                        <div class="inputs">
+                        <!-- <div class="inputs"> -->
+                        <form action="/" class="sign-in">
                             <div class="email">
                                 <label class="input-label" for="email-login">E-mail</label>
                                 <input class="form-field" id="email-login" name="email-login" type="email"
@@ -74,8 +75,9 @@
                                 <input class="form-field" id="password-login" name="password-login" type="password"
                                     placeholder="">
                             </div>
-                        </div>
-                        <a class="form-field sign-in-link" href="#">Sign In</a>
+                        </form>
+                        <!-- </div> -->
+                        <a class="form-field sign-in-link submit-data-login" href="#">Sign In</a>
                         <a href="#">Forgot Your Password?</a>
                         <span><img src="./assets/svg/Line-full.svg" alt=""></span>
                         <div><span>Don`t have an account?</span> <a href="#" id="signup-link">Register</a> </div>
@@ -89,7 +91,8 @@
                     <div class="signup-popup-content">
                         <p class="signup-title">Create account</p>
 
-                        <div class="inputs">
+                        <!-- <div class="inputs">  -->
+                        <form action="/" class="sign-in">
                             <div class="email">
                                 <label class="input-label" for="email-signup">E-mail</label>
                                 <input class="form-field" id="email-signup" name="email-signup" type="email"
@@ -100,8 +103,9 @@
                                 <input class="form-field" id="password-signup" name="password-signup" type="password"
                                     placeholder="">
                             </div>
-                        </div>
-                        <a class="form-field signup-link" href="#">Sign In</a>
+                        </form>
+                        <!-- </div> -->
+                        <a class="form-field signup-link submit-data-signup" href="#">Sign Up</a>
                         <a href="#">Forgot Your Password?</a>
                         <span><img src="./assets/svg/Line-full.svg" alt=""></span>
                         <div><span>Already have an account?</span> <a href="#" id="login-link">Log In</a> </div>

@@ -134,6 +134,7 @@ loginLink.addEventListener('click', (e) => {
         // console.log(loginPopup.classList)
     }, 25);
 });
+getFormDataLogin();
 
 
 // Closing the pop-up when clicked outside:
@@ -152,6 +153,7 @@ document.addEventListener("click", (e) => {
 
         loginPopup.classList.remove("shown");
         // console.log(loginPopup.classList)
+
     }
 }
 );
@@ -174,6 +176,8 @@ signupLink.addEventListener('click', (e) => {
         }
     }, 25);
 })
+getFormDataSignup();
+
 
 // Closing the pop-up when clicked outside:
 
@@ -192,6 +196,30 @@ document.addEventListener("click", (e) => {
     }
 }
 )
+
+// Collect form data in alert
+
+function getFormDataLogin() {
+    document.querySelector('.submit-data-login').addEventListener('click', function (e) {
+        console.log('data submitted')
+        e.preventDefault();
+        const email = document.getElementById('email-login').value;
+        const password = document.getElementById('password-login').value;
+        alert(`Email: ${email}, password: ${password}`);
+    });
+}
+
+function getFormDataSignup() {
+    document.querySelector('.submit-data-signup').addEventListener('click', function (e) {
+        console.log('data submitted')
+        e.preventDefault();
+        const email = document.getElementById('email-signup').value;
+        const password = document.getElementById('password-signup').value;
+        alert(`Email: ${email}, password: ${password}`);
+    });
+}
+
+
 
 
 
