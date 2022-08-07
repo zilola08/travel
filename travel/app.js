@@ -105,34 +105,89 @@ const dots = () => {
 
 // LOGIN POPUP
 
-const loginButton = document.querySelector('#login_button')
-const popupEl = document.querySelector('#popup')
+const loginButton = document.querySelector('#login-button')
+const loginPopup = document.querySelector('#login-popup')
 
 
 // Showing popup when clicked on the LOGIN button:
 
 loginButton.addEventListener('click', (e) => {
     setTimeout(() => {
-        if (!popupEl.classList.contains("shown")) {
-            // Add class `show` to filterList element
-            popupEl.classList.add("shown");
+        if (!loginPopup.classList.contains('shown')) {
+
+            loginPopup.classList.add('shown');
         }
-    }, 250);
-})
+        // console.log(loginPopup.classList)
+    }, 25);
+});
+
+// Showing popup when clicked on the LOGIN link insode the signup popup:
+const loginLink = document.querySelector('#login-link')
+
+loginLink.addEventListener('click', (e) => {
+    setTimeout(() => {
+        if (!loginPopup.classList.contains('shown') && signupPopup.classList.contains('shown')) {
+
+            signupPopup.classList.remove('shown')
+            loginPopup.classList.add('shown');
+        }
+        // console.log(loginPopup.classList)
+    }, 25);
+});
+
 
 // Closing the pop-up when clicked outside:
 
-const popupContent = document.querySelector('.popup-content')
+const loginPopupContent = document.querySelector('.login-popup-content')
+
+
 
 document.addEventListener("click", (e) => {
     // Get the element that was clicked
     const clickedEl = e.target;
     // console.log(clickedEl);
 
-    if (!popupContent.contains(clickedEl)) {
+    if (!loginPopupContent.contains(clickedEl) && loginPopup.classList.contains("shown")) {
         // `popupContent` is the element we're detecting clicks outside of
 
-        popupEl.classList.remove("shown");
+        loginPopup.classList.remove("shown");
+        // console.log(loginPopup.classList)
+    }
+}
+);
+
+
+// SIGNUP POPUP
+
+const signupLink = document.querySelector('#signup-link')
+const signupPopup = document.querySelector('#signup-popup')
+
+
+// Showing popup when clicked on the link inside the login popup:
+
+signupLink.addEventListener('click', (e) => {
+    setTimeout(() => {
+        if (!signupPopup.classList.contains("shown")) {
+            // Add class `show` to filterList element
+            loginPopup.classList.remove("shown");
+            signupPopup.classList.add("shown");
+        }
+    }, 25);
+})
+
+// Closing the pop-up when clicked outside:
+
+const signupPopupContent = document.querySelector('.signup-popup-content')
+
+document.addEventListener("click", (e) => {
+    // Get the element that was clicked
+    const clickedEl = e.target;
+    // console.log(clickedEl);
+
+    if (!signupPopupContent.contains(clickedEl) && signupPopup.classList.contains("shown")) {
+        // `popupContent` is the element we're detecting clicks outside of
+
+        signupPopup.classList.remove("shown");
         // console.log(popupEl.classList)
     }
 }

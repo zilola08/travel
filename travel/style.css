@@ -14,7 +14,6 @@ body {
 
 .container {
     max-width: 1440px;
-    width: 100%;
     margin: 0 auto;
     background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg), url(./assets/jpg/footer_img.jpeg);
     background-repeat: no-repeat;
@@ -41,6 +40,7 @@ img {
     border-radius: 10px;
     padding: 13.5px 31px;
     font-size: 24px;
+    cursor: pointer;
 }
 
 
@@ -204,7 +204,6 @@ figure {
 }
 
 .cards {
-    width: 2520px;
     display: grid;
     grid-template-columns: repeat(3, 800px);
     grid-gap: 60px;
@@ -212,8 +211,6 @@ figure {
     top: 0;
     left: 0;
     touch-action: none;
-
-    /* pointer-events: none; */
     width: 100%;
 }
 
@@ -297,10 +294,9 @@ a {
 
 
 
-/* ---------LOGIN */
+/* ---------LOGIN POPUP--------- */
 
-
-#popup{
+#login-popup {
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -312,11 +308,11 @@ a {
     display: none;
 }
 
-#popup.shown{
+#login-popup.shown {
     display: flex;
 }
 
-.popup-content {
+.login-popup-content {
     z-index: 1;
     position: relative;
     width: 650px;
@@ -332,23 +328,11 @@ a {
     align-items: center;
 }
 
-/* hr.half {
-    width: 45%;
-} */
 
 .line-or-line {
     display: flex;
     align-items: center;
     padding-top: 10px;
-}
-
-.close-popup {
-    color: #0D606F;
-    font-weight: bold;
-    font-size: 2rem;
-    display: flex;
-    justify-content: flex-end;
-    text-align: end;
 }
 
 .hidden {
@@ -363,7 +347,7 @@ a {
     line-height: 3.8rem;
 }
 
-.login-field {
+.form-field {
     width: 560px;
     height: 56px;
     border-radius: 10px;
@@ -388,22 +372,61 @@ a {
     text-align: left;
 }
 
-.inputs{
+.inputs {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.sign-in {
+.sign-in-link {
     background-color: rgba(13, 96, 111, 1);
     color: #FFFFFF;
 }
 
-/* .background {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+/*------------SIGNUP_POPUP--------------- */
+
+#signup-popup {
     align-items: center;
-    
-} */
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.signup-popup-content {
+    z-index: 1;
+    position: relative;
+    width: 650px;
+    height: 436px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    color: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.signup-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    color: #0D606F;
+    line-height: 3.8rem;
+}
+
+.signup-link {
+    background-color: rgba(13, 96, 111, 1);
+    color: #FFFFFF;
+}
+
+#signup-popup.shown {
+    display: flex;
+}

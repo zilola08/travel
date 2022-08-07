@@ -45,43 +45,68 @@
                 </div>
 
                 <!-- LOGIN POPUP -->
-                <button class="btn navbar-btn login" id="login_button">Login</button>
-                <div id="popup">
-                    <!-- <div class="background"> -->
-                    <div class="popup-content">
-                        <!-- <div class="close-popup"><span>&#10005;</span></div> -->
-                        
-                            <p class="login-title">Log in to your account</p>
-                            <a class="login-field facebook" href="#"> <span><img src="./assets/svg/facebook_signin.svg"
-                                        alt=""></span> Sign In with
-                                Facebook</a>
-                            <a class="login-field google" href="#"> <span><img src="./assets/svg/google_signin.svg"
-                                        alt=""></span> Sign In with
-                                Google</a>
-                            <div class="line-or-line">
-                                <img src="./assets/svg/Line-half.svg" alt=""> <span>or</span> <img
-                                    src="./assets/svg/Line-half.svg" alt="">
+                <button class="btn navbar-btn login" id="login-button">Login</button>
+                
+                <div id="login-popup">
 
+                    <div class="login-popup-content">
+
+                        <p class="login-title">Log in to your account</p>
+                        <a class="form-field facebook" href="#"> <span><img src="./assets/svg/facebook_signin.svg"
+                                    alt=""></span> Sign In with
+                            Facebook</a>
+                        <a class="form-field google" href="#"> <span><img src="./assets/svg/google_signin.svg"
+                                    alt=""></span> Sign In with
+                            Google</a>
+                        <div class="line-or-line">
+                            <img src="./assets/svg/Line-half.svg" alt=""> <span>or</span> <img
+                                src="./assets/svg/Line-half.svg" alt="">
+
+                        </div>
+                        <div class="inputs">
+                            <div class="email">
+                                <label class="input-label" for="email-login">E-mail</label>
+                                <input class="form-field" id="email-login" name="email-login" type="email"
+                                    placeholder="">
                             </div>
-                            <div class="inputs">
-                                <div class="email">
-                                    <label class="input-label" for="email">E-mail</label>
-                                    <input class="login-field" id="email" name="email" type="email" placeholder="">
-                                </div>
-                                <div class="password">
-                                    <label class="input-label" for="password">Password</label>
-                                    <input class="login-field" id="password" name="password" type="password"
-                                        placeholder="">
-                                </div>
+                            <div class="password">
+                                <label class="input-label" for="password-login">Password</label>
+                                <input class="form-field" id="password-login" name="password-login" type="password"
+                                    placeholder="">
                             </div>
-                            <a class="login-field sign-in" href="#">Sign In</a>
-                            <a href="#">Forgot Your Password?</a>
-                            <span><img src="./assets/svg/Line-full.svg" alt=""></span>
-                            <div><span>Don`t have an account?</span> <a href="#" id="register_link">Register</a> </div>
-                        <!-- </div> -->
+                        </div>
+                        <a class="form-field sign-in-link" href="#">Sign In</a>
+                        <a href="#">Forgot Your Password?</a>
+                        <span><img src="./assets/svg/Line-full.svg" alt=""></span>
+                        <div><span>Don`t have an account?</span> <a href="#" id="signup-link">Register</a> </div>
                     </div>
                 </div>
 
+                <!-- SIGN UP POPUP -->
+
+                <div id="signup-popup">
+
+                    <div class="signup-popup-content">
+                        <p class="signup-title">Create account</p>
+
+                        <div class="inputs">
+                            <div class="email">
+                                <label class="input-label" for="email-signup">E-mail</label>
+                                <input class="form-field" id="email-signup" name="email-signup" type="email"
+                                    placeholder="">
+                            </div>
+                            <div class="password">
+                                <label class="input-label" for="password-signup">Password</label>
+                                <input class="form-field" id="password-signup" name="password-signup" type="password"
+                                    placeholder="">
+                            </div>
+                        </div>
+                        <a class="form-field signup-link" href="#">Sign In</a>
+                        <a href="#">Forgot Your Password?</a>
+                        <span><img src="./assets/svg/Line-full.svg" alt=""></span>
+                        <div><span>Already have an account?</span> <a href="#" id="login-link">Log In</a> </div>
+                    </div>
+                </div>
 
             </nav>
 
