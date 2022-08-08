@@ -24,6 +24,7 @@
                 <span class="navbar-brand navbar-brand-icon"><img src="./assets/svg/Vector.svg" alt=""></span> <span
                     class="navbar-brand navbar-brand-text">Travel
                     Portal</span>
+                <span class="navbar-collapse-menu-icon"><img src="./assets/svg/menu-icon.svg" alt=""></span>
             </div>
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -31,19 +32,46 @@
             <div class="navbar-links" id="navbar-links">
                 <ul class="navbar-ul">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">How it works</a>
+                        <a class="nav-link" href="#preview">How it works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Plan Your Trip</a>
+                        <a class="nav-link" href="#steps">Plan Your Trip</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinations</a>
+                        <a class="nav-link" href="#destinations">Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Travel Stories</a>
+                        <a class="nav-link" href="#stories">Travel Stories</a>
                     </li>
                 </ul>
             </div>
+
+            <!-- Burger Menu -->
+            <div class="navbar-burger">
+                <span class="closing-icon"><img src="./assets/svg/closing-icon-burger.svg" alt=""></span>
+                <ul class="navbar-burger-ul">
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#preview">How it works</a>
+                    </li>
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#steps">Plan Your Trip</a>
+                    </li>
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#destinations">Destinations</a>
+                    </li>
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#stories">Travel Stories</a>
+                    </li>
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#login-popup-link">Account</a>
+                    </li>
+                    <li class="nav-burger-item">
+                        <a class="nav-burger-link" href="#socials">Social Media</a>
+                    </li>
+                </ul>
+            </div>
+
+
 
             <!-- LOGIN POPUP -->
             <button class="btn navbar-btn login" id="login-button">Login</button>
@@ -117,44 +145,45 @@
 
     <main>
 
-        <section class="preview section">
+        <section class="preview section" id="preview">
             <div class="preview-container">
                 <div class="preview section-text">
-                    <h1>Explore the beauty of the World</h1>
+                    <h1 class="preview-title">Explore the beauty of the World</h1>
                     <p class="preview-text">Receive personalized recommendations for countries, hotels, activities
                         and
                         more
                     </p>
                     <nav class="navbar search-field">
-                        <input type="search" placeholder="What would you like to do?" aria-label="Start Planning">
+                        <input class="search-field-input" type="search" placeholder="What would you like to do?"
+                            aria-label="Start Planning">
                         <button class="btn btn-preview" type="submit">Start Planning</button>
                     </nav>
                 </div>
             </div>
         </section>
 
-        <section class="steps section">
+        <section class="steps section" id="steps">
             <div class="section-container steps-section-container">
                 <h2 class="section-title">3 STEPS TO THE PERFECT TRIP</h2>
                 <div class="steps-container">
                     <figure>
                         <img class="steps-img" src="./assets/svg/step-1.svg" alt="">
-                        <figcaption>Tell us what you want to do</figcaption>
+                        <figcaption class="steps-image">Tell us what you want to do</figcaption>
                     </figure>
                     <figure>
                         <img class="steps-img" src="./assets/svg/step-2.svg" alt="">
-                        <figcaption>Share us preferable dates </figcaption>
+                        <figcaption class="steps-image">Share us preferable dates </figcaption>
                     </figure>
                     <figure>
                         <img class="steps-img" src="./assets/svg/step-3.svg" alt="">
-                        <figcaption>We will give you recommendations</figcaption>
+                        <figcaption class="steps-image">We will give you recommendations</figcaption>
                     </figure>
                 </div>
 
             </div>
         </section>
 
-        <section class="destinations">
+        <section class="destinations" id="destinations">
             <div class="destinations-container">
                 <h2 class="section-title destinations-title">POPULAR DESTINATIONS</h2>
                 <div class="slider-container">
@@ -162,49 +191,55 @@
                         <div class="cards">
                             <div class="card">
                                 <picture>
-                                    <source srcset="./assets/jpg/destination-1.jpeg" media="(min-width: 391px)" />
-                                    <source srcset="./assets/jpg/destination-1-sm.jpeg" media="(max-width: 390px)" />
+                                    <source srcset="./assets/jpg/destination-1.jpeg" media="(min-width: 767px)" />
+                                    <source srcset="./assets/jpg/destination-1-sm.jpeg" media="(max-width: 767px)" />
                                     <img src="./assets/jpg/destination-1.jpeg" alt="" class="destination-img">
                                 </picture>
                             </div>
                             <div class="card">
                                 <picture>
-                                    <source srcset="./assets/jpg/destination-2.jpeg" media="(min-width: 391px)" />
-                                    <source srcset="./assets/jpg/destination-2-sm.jpeg" media="(max-width: 390px)" />
+                                    <source srcset="./assets/jpg/destination-2.jpeg" media="(min-width: 767px)" />
+                                    <source srcset="./assets/jpg/destination-2-sm.jpeg" media="(max-width: 767px)" />
                                     <img src="./assets/jpg/destination-2.jpeg" alt="" class="destination-img">
                                 </picture>
                             </div>
                             <div class="card">
                                 <picture>
-                                    <source srcset="./assets/jpg/destination-3.jpeg" media="(min-width: 391px)" />
-                                    <source srcset="./assets/jpg/destination-3-sm.jpeg" media="(max-width: 390px)" />
+                                    <source srcset="./assets/jpg/destination-3.jpeg" media="(min-width: 767px)" />
+                                    <source srcset="./assets/jpg/destination-3-sm.jpeg" media="(max-width: 767px)" />
                                     <img src="./assets/jpg/destination-3.jpeg" alt="" class="destination-img">
                                 </picture>
                             </div>
                         </div>
                     </div>
-                    <div class="dots">
-                        <img src="./assets/svg/dot.svg" alt="" class="dot">
-                        <img src="./assets/svg/dot.svg" alt="" class="dot active-dot">
-                        <img src="./assets/svg/dot.svg" alt="" class="dot">
+                    <div class="small-slider-icons">
+                        <div class="arrows-slider">
+                            <img class="arrow-left-slider" src="./assets/svg/arrow-left-slider.svg" alt="">
+                            <img class="arrow-right-slider" src="./assets/svg/arrow-right-slider.svg" alt="">
+                        </div>
+                        <div class="dots">
+                            <img src="./assets/svg/dot.svg" alt="" class="dot active-dot">
+                            <img src="./assets/svg/dot.svg" alt="" class="dot">
+                            <img src="./assets/svg/dot.svg" alt="" class="dot">
+                        </div>
                     </div>
 
                     <div class="button">
-                        <button class="btn destinations-btn"><img class="arrow-right-icon"
+                        <button class="btn destinations-btn button"><img class="arrow-right-icon"
                                 src="./assets/svg/arrow-right.svg" alt=""> Find more</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="stories section">
+        <section class="stories section" id="stories">
             <h2 class="section-title stories-section-title">TRAVEL STORIES</h2>
             <div class="stories-wrapper">
                 <div class="stories-container">
                     <div class="story">
                         <picture>
-                            <source srcset="./assets/jpg/story-1.jpeg" media="(min-width: 391px)" />
-                            <source srcset="./assets/jpg/story-1-sm.jpeg" media="(min-width: 300px)" />
+                            <source srcset="./assets/jpg/story-1.jpeg" media="(min-width: 767px)" />
+                            <source srcset="./assets/jpg/story-1-sm.jpeg" media="(max-width: 767px)" />
                             <img src="./assets/jpg/story-1.jpeg" alt="" class="story-img">
                         </picture>
                         <div class="story-box">
@@ -227,8 +262,8 @@
                     </div>
                     <div class="story">
                         <picture>
-                            <source srcset="./assets/jpg/story-2.jpeg" media="(min-width: 391px)" />
-                            <source srcset="./assets/jpg/story-2-sm.jpeg" media="(min-width: 300px)" />
+                            <source srcset="./assets/jpg/story-2.jpeg" media="(min-width: 767px)" />
+                            <source srcset="./assets/jpg/story-2-sm.jpeg" media="(max-width: 767px)" />
                             <img src="./assets/jpg/story-1.jpeg" alt="" class="story-img">
                         </picture>
                         <div class="story-box">
@@ -251,8 +286,8 @@
                     </div>
                     <div class="story">
                         <picture>
-                            <source srcset="./assets/jpg/story-3.jpeg" media="(min-width: 391px)" />
-                            <source srcset="./assets/jpg/story-3-sm.jpeg" media="(min-width: 300px)" />
+                            <source srcset="./assets/jpg/story-3.jpeg" media="(min-width: 767px)" />
+                            <source srcset="./assets/jpg/story-3-sm.jpeg" media="(max-width: 767px)" />
                             <img src="./assets/jpg/story-3.jpeg" alt="" class="story-img">
                         </picture>
                         <div class="story-box">
@@ -273,7 +308,12 @@
                                 More</a>
                         </div>
                     </div>
-                    <div class="story"><img src="./assets/jpg/story-4.jpeg" alt="" class="story-img">
+                    <div class="story">
+                        <picture>
+                            <source srcset="./assets/jpg/story-4.jpeg" media="(min-width: 767px)" />
+                            <source srcset="./assets/jpg/story-4-sm.jpeg" media="(max-width: 767px)" />
+                            <img src="./assets/jpg/story-4.jpeg" alt="" class="story-img">
+                        </picture>
                         <div class="story-box">
                             <h3 class="story-title">The Longest journey in my life!</h3>
                             <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -302,8 +342,10 @@
     </main>
     <footer class="footer">
         <span class="footer-element"> </span>
+        <span class="footer-element"> </span>
         <span class="footer-element">All Rights Reserved &copy; Travel Portal</span>
-        <ul class="socials">
+        <span class="footer-element"> </span>
+        <ul class="socials" id="socials">
             <li><a href="https://github.com/zilola08 " target="_blank"><img src="./assets/svg/instagram.svg" alt=""></a>
             </li>
             <li><a href="https://github.com/zilola08 " target="_blank"><img src="./assets/svg/youtube.svg" alt=""></a>
