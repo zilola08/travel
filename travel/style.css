@@ -3,11 +3,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
     overflow-x: hidden;
-
 }
 
 body {
@@ -22,6 +22,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
+
 }
 
 img {
@@ -43,6 +44,13 @@ img {
 
 
 /* -------NAVBAR-------- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 
 .navbar-ul {
     display: flex;
@@ -89,6 +97,15 @@ p.preview-text {
     text-decoration: none;
 }
 
+.nav-link:hover {
+    color: #0D606F;
+}
+
+.btn:hover {
+    background-color: #8ad0dd;
+    color: #083c45;
+}
+
 .navbar-btn {
     width: 103px;
     height: 41px;
@@ -98,13 +115,18 @@ p.preview-text {
 
 /* --------SECTION PREVIEW---------- */
 section.preview {
-    height: 765px;
+    /* height: 765px; */
     display: flex;
     flex-direction: column;
-    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg), url(./assets/jpg/footer_img.jpeg);
+    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg);
     background-repeat: no-repeat;
     background-position: center top, center bottom;
     background-size: cover;
+}
+
+.preview-container {
+    height: 765px;
+    padding-top: 122px;
 }
 
 .preview.section-text {
@@ -115,6 +137,7 @@ section.preview {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
 }
 
 h1 {
@@ -198,18 +221,19 @@ figure {
 
 .slider-container {
     position: relative;
-    height: 800px;
-    /* width: 1970px;
-    max-width: 2520px; */
     /* overflow: hidden; */
-    left: -530px;
     touch-action: none;
+}
+
+.cards-container {
+    height: 800px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 800px);
     grid-gap: 60px;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -251,10 +275,34 @@ figure {
 
 /* ------------TRAVEL STORIES SECTION-------- */
 
-.stories {
-    background: rgba(255, 255, 255, 0.7);
-    width: 100%;
-    padding-bottom: 55px;
+section.stories {
+    position: relative;
+}
+
+.stories-wrapper {
+    background: url(./assets/jpg/footer_img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 40px 0 102px 0;
+}
+
+.stories-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stories-container {
+    position: relative;
+    z-index: 1;
 }
 
 .story {
@@ -266,6 +314,10 @@ figure {
 
 h3.story-title {
     font-size: 35px;
+}
+
+h2.stories-section-title {
+    margin-bottom: 40px;
 }
 
 .story-image {
@@ -280,19 +332,23 @@ a {
     color: #0D606F;
 }
 
-/* ------Footer------ */
-.footer-section {
-    background-color: rgba(255, 255, 255, 0.7);
-    ;
+.btn-destinations {
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
 }
+
+/* ------Footer------ */
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1400px;
-    margin: 0 auto;
+    margin: 5px auto;
     color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .socials {
@@ -304,6 +360,8 @@ a {
 .button {
     display: flex;
     justify-content: center;
+    z-index: 1;
+    align-items: center;
 }
 
 .footer-element {
