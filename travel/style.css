@@ -112,10 +112,16 @@ p.preview-text {
     font-size: 16px;
 }
 
+span.navbar-collapse-menu-icon {
+    display: none;
+}
+
+.navbar-burger {
+    display: none;
+}
 
 /* --------SECTION PREVIEW---------- */
 section.preview {
-    /* height: 765px; */
     display: flex;
     flex-direction: column;
     background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg);
@@ -124,13 +130,248 @@ section.preview {
     background-size: cover;
 }
 
+@media (max-width: 767px) {
+    section.preview {
+        height: 251px;
+        background-image: url("./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash-sm.jpeg");
+        background-repeat: no-repeat;
+        background-position: center top, center bottom;
+        background-size: cover;
+    }
+
+    h1.preview-title,
+    p.preview-text {
+        display: none;
+    }
+
+    div.preview.section-text {
+        padding: 0;
+        margin: 0 15px;
+        width: 360px;
+        height: 48px;
+    }
+
+    ul.navbar-ul,
+    span.navbar-brand.navbar-brand-text,
+    #login-button {
+        display: none;
+    }
+
+    .navbar-container {
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+        border: none;
+        box-shadow: none;
+        box-shadow: 5px 10px 30px 30px rgb(13 96 111 / 70%);
+        width: 100%;
+        height: 0px;
+        justify-content: space-between;
+        /* position: fixed; */
+    }
+
+    span.navbar-brand.navbar-brand-icon {
+        position: absolute;
+        top: 43px;
+        left: 16px;
+    }
+
+    span.navbar-collapse-menu-icon {
+        display: inline;
+        position: fixed;
+        top: 43px;
+        right: 5%;
+        z-index: 11;
+    }
+
+    button.btn {
+        font-size: 11px;
+        padding: 7.5px 9px;
+    }
+
+
+    img.arrow-right-icon {
+        width: 10px;
+    }
+
+    #preview>div>div.preview.section-text {
+        max-width: 92.3%;
+    }
+
+    input.search-field-input::placeholder {
+        color: #F2785C;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    input.search-field-input {
+        background-color: transparent;
+        border: none;
+        max-width: 500px;
+        height: 48px;
+        padding-left: 16.55px;
+    }
+
+    img.steps-img {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    figure>figcaption.steps-image {
+        font-size: 10px;
+        margin: 0 0px;
+        width: 100px;
+    }
+
+    div.steps-container {
+        max-width: 360px;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    div.cards-container {
+        height: 210px;
+        margin-bottom: 10px;
+    }
+
+    h2.section-title {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    div.cards {
+        grid-template-columns: repeat(3, 360px);
+        grid-gap: 20px;
+        position: absolute;
+        left: 380px;
+    }
+
+    div.dots {
+        position: absolute;
+        top: 180px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    div.dots>img {
+        width: 8px;
+        height: 8px;
+
+    }
+
+    div.arrows-slider {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        position: absolute;
+        top: 90px;
+        width: 90%;
+    }
+
+    div>h3.story-title {
+        font-size: 11px;
+    }
+
+    div>p.story-text,
+    div.story-box>a {
+        font-size: 9px;
+    }
+
+    div.story {
+        gap: 10px;
+        margin: 15px;
+    }
+
+    h2.section-title.stories-section-title {
+        margin-bottom: 10px;
+    }
+
+    section.stories.section>div>div.stories-container {
+        margin-top: -45px;
+    }
+
+    footer>span.footer-element:not(:last-child) {
+        display: none;
+    }
+
+    footer.footer {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        display: flex;
+    }
+
+    section.stories.section>div.stories-wrapper {
+        padding-bottom: 60px;
+    }
+
+    section.stories.section>div.stories-wrapper::before {
+        bottom: 50px;
+    }
+
+    .stories-wrapper {
+        background: url(./assets/jpg/footer_img-sm.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+    }
+
+    .navbar-burger {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -165px;
+        width: 165px;
+        height: 250px;
+        font-size: 16px;
+        background: rgba(242, 120, 92, 1);
+        border-radius: 10px;
+        padding: 15px;
+        z-index: 11;
+        transform: translateX(+165px);
+        transition: transform 1000ms ease-in-out;
+    }
+
+    .navbar-burger.shown {
+        transform: translateX(-165px);
+        transition: transform 1000ms ease-in-out;
+    }
+
+    ul.navbar-burger-ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 176px;
+        align-items: flex-end;
+    }
+
+    a.nav-burger-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    span.closing-icon,
+    input.open-burger-menu {
+        height: 30px;
+        width: 30px;
+    }
+
+}
+
+
+
 .preview-container {
     height: 765px;
     padding-top: 122px;
 }
 
 .preview.section-text {
-    width: 892px;
+    max-width: 892px;
     height: 422px;
     margin-left: 120px;
     margin-top: 32px;
@@ -172,7 +413,7 @@ input {
 }
 
 .btn-preview {
-    margin-right: 18px;
+    margin-right: 9px;
     white-space: nowrap;
 }
 
@@ -216,6 +457,11 @@ figure {
     align-items: center;
 }
 
+figcaption.steps-image {
+    font-size: 24px;
+    text-align: center;
+}
+
 /*------------DESTINATIONS SECTION------------  */
 
 
@@ -252,6 +498,10 @@ figure {
     width: 100%;
 }
 
+.arrows {
+    display: none;
+}
+
 .dots {
     margin: 24px;
     text-align: center;
@@ -271,6 +521,11 @@ figure {
 
 .arrow-right-icon {
     width: 35px;
+    margin-right: 6px;
+}
+
+.arrows-slider {
+    display: none;
 }
 
 /* ------------TRAVEL STORIES SECTION-------- */
@@ -342,7 +597,7 @@ a {
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 5px auto;
     color: white;
@@ -354,7 +609,8 @@ a {
 .socials {
     display: flex;
     list-style: none;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 260px;
 }
 
 .button {
