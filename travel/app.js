@@ -8,21 +8,21 @@ const burgerLink = document.querySelectorAll('.nav-burger-item')
 
 burgerMenuIcon.addEventListener('click', (e) => {
     setTimeout(() => {
-        burgerMenu.classList.add('shown')
-    }, 25);
+        burgerMenu.classList.toggle('shown');
+    }, 0.01);
 })
 
 closeIcon.addEventListener('click', (e) => {
     setTimeout(() => {
         burgerMenu.classList.remove('shown')
-    }, 25);
+    }, 0.01);
 })
 
 burgerLink.forEach(link =>
     link.addEventListener('click', (e) => {
         setTimeout(() => {
             burgerMenu.classList.remove('shown')
-        }, 25);
+        }, 0.01);
     }
     ))
 

@@ -176,9 +176,10 @@ section.preview {
 
     span.navbar-collapse-menu-icon {
         display: inline;
-        position: absolute;
+        position: fixed;
         top: 43px;
-        right: 16px;
+        right: 5%;
+        z-index: 11;
     }
 
     button.btn {
@@ -199,13 +200,12 @@ section.preview {
         color: #F2785C;
         font-style: italic;
         font-size: 14px;
-        max-width: fit-content;
     }
 
     input.search-field-input {
         background-color: transparent;
         border: none;
-        max-width: fit-content;
+        max-width: 500px;
         height: 48px;
         padding-left: 16.55px;
     }
@@ -320,26 +320,25 @@ section.preview {
     }
 
     .navbar-burger {
-        display: none;
-    }
-
-    .navbar-burger.shown {
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: 0;
+        right: -165px;
         width: 165px;
         height: 250px;
         font-size: 16px;
         background: rgba(242, 120, 92, 1);
         border-radius: 10px;
         padding: 15px;
-        z-index: 1;
-        /* transition-timing-function: cubic-bezier(10,2,3,1);
-    transform: translateX(165px);
-    transition: 0.5s; */
+        z-index: 11;
+        transform: translateX(+165px);
+        transition: transform 1000ms ease-in-out;
+    }
 
+    .navbar-burger.shown {
+        transform: translateX(-165px);
+        transition: transform 1000ms ease-in-out;
     }
 
     ul.navbar-burger-ul {
@@ -356,7 +355,8 @@ section.preview {
         text-decoration: none;
     }
 
-    span.closing-icon {
+    span.closing-icon,
+    input.open-burger-menu {
         height: 30px;
         width: 30px;
     }
