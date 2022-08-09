@@ -267,6 +267,10 @@ section.preview {
         width: 90%;
     }
 
+    .arrow-left-slider{
+        transform: rotate(-180deg);
+    }
+
     div>h3.story-title {
         font-size: 11px;
     }
@@ -484,8 +488,9 @@ figcaption.steps-image {
     top: 0;
     left: 0;
     touch-action: none;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* -> pointer events are off here so that e.offsetX is not calculated to anyo ther div but slider-container. If we dont turn it off, e.offsetX will be relative to each card, not the container, so it will change each time we are pointing on another card. But we want it to be consistently relative to one big container, which is slider-container. */
+    /* BUT! WHEN POINTER EVENTS ARE OFF, POINTER (MOUSE) CANT SELECT A SEPARATE ELEMENT AND SO ALSO CANT CLICK ON IT! SO CLICK EVENT LISTENERS WONT WORK ON SEPARATE ELEMENTS! */
     width: 100%;
 }
 
