@@ -547,7 +547,7 @@ form.sign-in {
 @media (max-width: 767px) {
     section.preview {
         background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash-sm.jpeg);
-        height: 161px;
+        height: 141px;
         width: 100%;
         background-position: center -90px;
         background-size: cover;
