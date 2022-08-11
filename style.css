@@ -230,7 +230,7 @@ figcaption.steps-image {
 .slider-container {
     position: relative;
     /* overflow: hidden; */
-    touch-action: none;
+    /* touch-action: none; this would be necessary if we would do swiper, not a slider*/
 }
 
 .cards-container {
