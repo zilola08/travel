@@ -1,0 +1,925 @@
+* {
+    font-family: 'Aleo', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+.section {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+img {
+    border-radius: 16px;
+}
+
+/* -------BUTTONS--------- */
+
+.btn {
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    color: white;
+    border-radius: 10px;
+    padding: 13.5px 31px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* -------NAVBAR-------- */
+.header {
+    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg);
+    background-position: top;
+}
+
+
+.navbar-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 42px;
+    list-style: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 90px;
+    width: 100%;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+}
+
+.navbar-brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-btn,
+h1,
+p.preview-text {
+    border: none;
+    color: white;
+}
+
+.navbar-brand-text {
+    font-size: 32px;
+}
+
+.nav-link {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #0D606F;
+}
+
+.btn:hover {
+    background-color: #8ad0dd;
+    color: #083c45;
+}
+
+.navbar-btn {
+    width: 103px;
+    height: 41px;
+    font-size: 16px;
+}
+
+span.navbar-collapse-menu-icon {
+    display: none;
+}
+
+.navbar-burger {
+    display: none;
+}
+
+/* --------SECTION PREVIEW---------- */
+section.preview {
+    display: flex;
+    flex-direction: column;
+    background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center -90px;
+}
+
+.preview-container {
+    height: 765px;
+    padding-top: 122px;
+}
+
+.preview.section-text {
+    max-width: 892px;
+    height: 422px;
+    margin-left: 120px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+p.preview-text {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.search-field {
+    background-color: rgba(255, 255, 255, 0.70);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+}
+
+::placeholder {
+    color: #F2785C;
+    font-style: italic;
+    font-size: 24px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    width: 560px;
+    height: 95px;
+    padding-left: 45px;
+}
+
+.btn-preview {
+    margin-right: 9px;
+    white-space: nowrap;
+}
+
+/* -----------SECTION STEPS------------ */
+
+.section-container {
+    margin: 80px 0;
+}
+
+.steps-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.section-title {
+    font-size: 40px;
+    color: rgba(242, 120, 92, 1);
+    text-align: center;
+    margin: 80px 0;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: inherit;
+}
+
+.steps-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+figcaption.steps-image {
+    font-size: 24px;
+    text-align: center;
+}
+
+/*------------DESTINATIONS SECTION------------  */
+
+
+.slider-container {
+    position: relative;
+    /* overflow: hidden; */
+    /* touch-action: none; this would be necessary if we would do swiper, not a slider*/
+}
+
+.cards-container {
+    height: 800px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 800px);
+    grid-gap: 60px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* touch-action: none; */
+    /* pointer-events: none; */
+    /* -> pointer events are off here so that e.offsetX is not calculated to anyo ther div but slider-container. If we dont turn it off, e.offsetX will be relative to each card, not the container, so it will change each time we are pointing on another card. But we want it to be consistently relative to one big container, which is slider-container. */
+    /* BUT! WHEN POINTER EVENTS ARE OFF, POINTER (MOUSE) CANT SELECT A SEPARATE ELEMENT AND SO ALSO CANT CLICK ON IT! SO CLICK EVENT LISTENERS WONT WORK ON SEPARATE ELEMENTS! */
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.destination-image {
+    width: 100%;
+}
+
+.arrows {
+    display: none;
+}
+
+.dots {
+    margin: 24px;
+    text-align: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(242, 120, 92, 0.5);
+}
+
+.active-dot {
+    background: rgba(242, 120, 92, 1);
+    cursor: default;
+}
+
+.arrow-right-icon {
+    width: 35px;
+    margin-right: 6px;
+}
+
+.arrows-slider {
+    display: none;
+}
+
+/* ------------TRAVEL STORIES SECTION-------- */
+
+section.stories {
+    position: relative;
+}
+
+.stories-wrapper {
+    background: url(./assets/jpg/footer_img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 40px 0 102px 0;
+}
+
+.stories-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stories-container {
+    position: relative;
+    z-index: 1;
+}
+
+.story {
+    display: flex;
+    gap: 40px;
+    margin: 30px;
+    color: #0D606F;
+}
+
+h3.story-title {
+    font-size: 35px;
+}
+
+h2.stories-section-title {
+    margin-bottom: 40px;
+}
+
+.story-image {
+    width: 100%;
+}
+
+p.story-text {
+    font-size: 24px;
+}
+
+a {
+    color: #0D606F;
+}
+
+.btn-destinations {
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* ------Footer------ */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 260px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    align-items: center;
+}
+
+.footer-element {
+    width: 260px;
+}
+
+
+/* ---------LOGIN POPUP--------- */
+
+#login-popup {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+#login-popup.shown {
+    display: flex;
+}
+
+.login-popup-content {
+    position: relative;
+    max-width: 650px;
+    max-height: 660px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    color: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 10px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.line-or-line {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    color: #0D606F;
+    line-height: 3.8rem;
+}
+
+.form-field {
+    /* max-width: 560px; */
+    width: 100%;
+    height: 56px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+}
+
+.facebook {
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+form.sign-in {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* width: 90%; */
+}
+
+.email,
+.password {
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-label {
+    display: block;
+}
+
+.sign-in-link,
+.sign-up-link {
+    background-color: rgba(13, 96, 111, 1);
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/*------------SIGNUP_POPUP--------------- */
+
+#signup-popup {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.signup-popup-content {
+    z-index: 1;
+    position: relative;
+    width: 650px;
+    height: 436px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    color: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 10px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.signup-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    color: #0D606F;
+    line-height: 3.8rem;
+}
+
+.signup-link {
+    background-color: rgba(13, 96, 111, 1);
+    color: #FFFFFF;
+}
+
+#signup-popup.shown {
+    display: flex;
+}
+
+/* ------------MOBILE------------ */
+
+@media (max-width: 767px) {
+    section.preview {
+        background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash-sm.jpeg);
+        height: 141px;
+        width: 100%;
+        background-position: center -90px;
+        background-size: cover;
+    }
+
+    div.preview-container {
+        padding: 0;
+    }
+
+    h1.preview-title,
+    p.preview-text {
+        display: none;
+    }
+
+    div.preview.section-text {
+        padding: 0;
+        margin: 0 15px;
+        width: 360px;
+        height: 48px;
+    }
+
+    ul.navbar-ul,
+    span.navbar-brand.navbar-brand-text,
+    #login-button {
+        display: none;
+    }
+
+    .navbar-container {
+        background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash-sm.jpeg);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        box-shadow: 0px 45px 20px rgb(13 96 111 / 70%) inset;
+        justify-content: space-between;
+    }
+
+    div.navbar-brand-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    span.navbar-collapse-menu-icon {
+        display: inline;
+        z-index: 11;
+    }
+
+    button.btn {
+        font-size: 11px;
+        padding: 7.5px 9px;
+    }
+
+
+    img.arrow-right-icon {
+        width: 10px;
+    }
+
+    .arrow-left-slider.end,
+    .arrow-right-slider.end {
+        opacity: 50%;
+    }
+
+    #preview>div>div.preview.section-text {
+        max-width: 92.3%;
+    }
+
+    input.search-field-input::placeholder {
+        color: #F2785C;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    div.search-field {
+        margin-top: 52px;
+    }
+
+    input.search-field-input {
+        background-color: transparent;
+        border: none;
+        max-width: 500px;
+        height: 48px;
+        padding-left: 16.55px;
+    }
+
+    img.steps-img {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    figure>figcaption.steps-image {
+        font-size: 10px;
+        margin: 0 0px;
+        width: 100px;
+    }
+
+    div.steps-container {
+        max-width: 360px;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    div.cards-container {
+        height: 210px;
+        margin-bottom: 10px;
+    }
+
+    h2.section-title {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    div.cards {
+        grid-template-columns: repeat(3, 360px);
+        grid-gap: 20px;
+    }
+
+    div.dots {
+        position: absolute;
+        top: 180px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    div.dots>img {
+        width: 8px;
+        height: 8px;
+    }
+
+    div.arrows-slider {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        position: absolute;
+        top: 90px;
+        width: 90%;
+    }
+
+    .arrow-left-slider {
+        transform: rotate(-180deg);
+    }
+
+    div>h3.story-title {
+        font-size: 11px;
+    }
+
+    div>p.story-text,
+    div.story-box>a {
+        font-size: 9px;
+    }
+
+    div.story {
+        gap: 10px;
+        margin: 15px;
+    }
+
+    h2.section-title.stories-section-title {
+        margin-bottom: 10px;
+    }
+
+    section.stories.section>div>div.stories-container {
+        margin-top: -45px;
+    }
+
+    footer>span.footer-element:not(:last-child) {
+        display: none;
+    }
+
+    footer.footer {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        display: flex;
+    }
+
+    section.stories.section>div.stories-wrapper {
+        padding-bottom: 60px;
+    }
+
+    section.stories.section>div.stories-wrapper::before {
+        bottom: 50px;
+    }
+
+    .stories-wrapper {
+        background: url(./assets/jpg/footer_img-sm.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+    }
+
+    .navbar-burger {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -165px;
+        width: 165px;
+        height: 250px;
+        font-size: 16px;
+        background: rgba(242, 120, 92, 1);
+        border-radius: 10px;
+        padding: 15px;
+        z-index: 11;
+        transform: translateX(+165px);
+        transition: transform 1000ms ease-in-out;
+    }
+
+    .navbar-burger.shown {
+        transform: translateX(-165px);
+        transition: transform 1000ms ease-in-out;
+    }
+
+    ul.navbar-burger-ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 176px;
+        align-items: flex-end;
+    }
+
+    a.nav-burger-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    span.closing-icon,
+    input.open-burger-menu {
+        height: 30px;
+        width: 30px;
+    }
+
+    div#login-popup {
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+
+    div.login-popup-content {
+        z-index: 2;
+        position: relative;
+        background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+        color: #0D606F;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        width: 300px;
+        height: fit-content;
+        font-size: 12px;
+    }
+
+    p.login-title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        color: #0D606F;
+        line-height: 3rem;
+    }
+
+    a.form-field {
+        width: 220px;
+        height: 36px;
+        border-radius: 10px;
+        background: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        gap: 20px;
+
+    }
+
+    input.form-field {
+        width: 220px;
+        height: 36px;
+    }
+
+    div.line-or-line {
+        justify-content: center;
+    }
+
+    div.line-or-line>img {
+        width: 50%;
+    }
+
+    a.form-field.facebook {
+        background: #1877F2;
+        box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    div.login-popup-content>span>img {
+        width: 100%;
+    }
+
+    .input-label {
+        text-align: left;
+    }
+
+    form.sign-in {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    div.email,
+    div.password {
+        width: 100%;
+    }
+
+    a.sign-in-link {
+        background-color: rgba(13, 96, 111, 1);
+        color: #FFFFFF;
+        margin: 15px;
+    }
+
+    /*------------SIGNUP_POPUP--------------- */
+
+    div#signup-popup {
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+
+    div.signup-popup-content {
+        z-index: 2;
+        position: relative;
+        width: 300px;
+        height: fit-content;
+        font-size: 12px;
+        background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+        color: #0D606F;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p.signup-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0D606F;
+    }
+
+    a.signup-link {
+        background-color: rgba(13, 96, 111, 1);
+        color: #FFFFFF;
+        margin: 10px;
+    }
+
+    #signup-popup.shown {
+        display: flex;
+    }
+
+}
