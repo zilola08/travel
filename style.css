@@ -127,6 +127,12 @@ section.preview {
     background-position: center -90px;
 }
 
+@media (min-width: 1440px) {
+    section.preview, .header {
+        background-size: cover;
+    }
+}
+
 .preview-container {
     height: 765px;
     padding-top: 122px;
