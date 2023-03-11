@@ -16,6 +16,7 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    background-color: beige;
 }
 
 
@@ -125,6 +126,12 @@ section.preview {
     background: url(./assets/jpg/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpeg);
     background-repeat: no-repeat;
     background-position: center -90px;
+}
+
+@media (min-width: 1440px) {
+    section.preview, .header {
+        background-size: cover;
+    }
 }
 
 .preview-container {
