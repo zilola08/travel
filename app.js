@@ -127,7 +127,7 @@ const addActiveClass = () => {
 }
 
 // DESKTOP AND MOBILE SETTINGS:
-window.onresize = function () { location.reload(); }
+// window.onresize = function () { location.reload(); }
 
 // Check the media query and choose the appropriate settings:
 checkIfDesktop();
